@@ -1,8 +1,8 @@
 {
-  "name": "ACME Shell",
+  "name": "ACME.sh",
   "version": "1",
   "slug": "acme_sh",
-  "description": "ACME Shell script for genLet's Encrypt",
+  "description": "ACME.sh add-on for generating Let's Encrypt certificates.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
   "boot": "auto",
