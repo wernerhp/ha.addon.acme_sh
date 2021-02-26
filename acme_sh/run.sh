@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-CERT_DIR=/data/letsencrypt
-
 DOMAINS=$(bashio::config 'domains')
 KEYFILE=$(bashio::config 'keyfile')
 CERTFILE=$(bashio::config 'certfile')
@@ -20,7 +18,7 @@ for domain in $DOMAINS; do
 done
 
 /root/.acme.sh/acme.sh --issue "${DOMAIN_ARR[@]}" \
---dns $DNS_PROVIDER
+--dns "$DNS_PROVIDER"
 
 /root/.acme.sh/acme.sh --install-cert "${DOMAIN_ARR[@]}" \
 --fullchain-file "/ssl/${CERTFILE}" \
