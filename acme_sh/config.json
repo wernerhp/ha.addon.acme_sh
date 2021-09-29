@@ -1,26 +1,28 @@
 {
-  "name": "ACME.sh",
-  "version": "1",
-  "slug": "acme_sh",
-  "description": "ACME.sh add-on for generating Let's Encrypt certificates.",
+  "name": "Let's Encrypt with ACME.sh",
+  "version": "2.0.1",
+  "slug": "letsencrypt_acme_sh",
+  "description": "Manage certificates from Let's Encrypt with ACME.sh",
+  "url": "https://github.com/wernerhp/ha_addon_acme_sh",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
-  "boot": "auto",
+  "boot": "manual",
   "map": ["ssl:rw"],
   "options": {
+    "account": "str",
     "domains": [null],
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
     "dns": {}
   },
   "schema": {
+    "account": "str",
     "domains": ["str"],
     "certfile": "str",
     "keyfile": "str",
     "dns": {
-      "provider": "list(dns_freedns)?",
-      "username": "str?",
-      "password": "str?"
+      "provider": "str",
+      "env": ["str"]
     }
   }
 }
