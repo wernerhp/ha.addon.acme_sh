@@ -1,5 +1,5 @@
 {
-  "name": "Home Assistant ACME.sh",
+  "name": "Home Assistant ACME.sh Certs",
   "url": "https://github.com/wernerhp/ha_addon_acme_sh",
   "maintainer": "Werner Pieterson <wernerhp@gmail.com>"
 }

@@ -1,8 +1,8 @@
 {
-  "name": "Let's Encrypt with ACME.sh",
-  "version": "2.0.1",
-  "slug": "letsencrypt_acme_sh",
-  "description": "Manage certificates from Let's Encrypt with ACME.sh",
+  "name": "ACME.sh Certs",
+  "version": "2.0.2",
+  "slug": "acme_sh",
+  "description": "Manage certificates with ACME.sh",
   "url": "https://github.com/wernerhp/ha_addon_acme_sh",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
