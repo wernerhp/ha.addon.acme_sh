@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
 ACCOUNT=$(bashio::config 'account')
+SERVER=$(bashio::config 'server')
 DOMAINS=$(bashio::config 'domains')
 KEYFILE=$(bashio::config 'keyfile')
 CERTFILE=$(bashio::config 'certfile')
@@ -16,10 +17,16 @@ for domain in $DOMAINS; do
     DOMAIN_ARR+=(--domain "$domain")
 done
 
-/root/.acme.sh/acme.sh --register-account -m ${ACCOUNT}
+SERVER_ARG=""
+if [ -n "$SERVER" ]; then
+    SERVER_ARG="--server $SERVER"
+fi
+
+/root/.acme.sh/acme.sh --register-account -m ${ACCOUNT} $SERVER_ARG
 
 /root/.acme.sh/acme.sh --issue "${DOMAIN_ARR[@]}" \
---dns "$DNS_PROVIDER"
+--dns "$DNS_PROVIDER" \
+$SERVER_ARG
 
 /root/.acme.sh/acme.sh --install-cert "${DOMAIN_ARR[@]}" \
 --fullchain-file "/ssl/${CERTFILE}" \
