@@ -1,12 +1,13 @@
 {
   "name": "ACME.sh Certs",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "slug": "acme_sh",
   "description": "Manage certificates with ACME.sh",
   "url": "https://github.com/wernerhp/ha_addon_acme_sh",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
   "boot": "manual",
+  "init": false,
   "map": ["ssl:rw"],
   "options": {
     "account": "str",
