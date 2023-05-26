@@ -5,9 +5,10 @@ A Home Assistant add-on that uses ACME.sh to generate certificates.
 ACME.sh uses ZeroSSL.com CA by default.  Set `account` to your email address to register a ZeroSSL.com account.
 Specify the `dns.provider` from the supported list at https://github.com/acmesh-official/acme.sh/wiki/dnsapi
 Add environment variables to the `dns.env` list.  No need to add `export`.  NB: Do not use quotes in environment variables.
+The server can be one listed at https://github.com/acmesh-official/acme.sh/wiki/Server (default: `zerossl`)
 
 ## Troubleshooting
-- Add `DEBUG=1` (or `2` or `3`) to `env` for debug output.
+- Add `DEBUG=1` (or `2` or `3`) to `env` for debug output. 
 Certificates will be installed to `/ssl/`
 
 ## Config
