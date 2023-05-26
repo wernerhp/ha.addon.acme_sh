@@ -17,7 +17,7 @@ for domain in $DOMAINS; do
     DOMAIN_ARR+=(--domain "$domain")
 done
 
-SERVER_ARG=""
+SERVER_ARG="openssl"
 if [ -n "$SERVER" ]; then
     SERVER_ARG="--server $SERVER"
 fi
