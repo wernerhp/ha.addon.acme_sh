@@ -13,6 +13,7 @@ Certificates will be installed to `/ssl/`
 ## Config
 ```
 account: me@example.com
+server: zerossl
 domains:
   - my.domain.tld
   - '*.my.domain.tld'
