@@ -11,6 +11,8 @@ It requires you to own the domain you are requesting the certificate for.
 
 The generated certificate can be used within others addons. By default the path and file for the certificates within other addons will refer to the files generated within this addon.
 
+📚 [Read the full add-on documentation](https://github.com/wernerhp/ha.addon.acme_sh/blob/master/acme_sh/DOCS.md)
+
 [acme.sh]: https://github.com/acmesh-official/acme.sh/
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
